@@ -9,6 +9,7 @@
 # supernova lincusa boot --image "Ubuntu 14.04 LTS (Trusty Tahr) (PVHVM)" --flavor performance1-8 --key-name {YOUR_KEY} --user-data "ubuntu-init-script.sh" --config-drive true {YOUR_SERVER_NAME}
 # 
 # Maintainer: andre [at] enthropia [dot] com
+# Original: ivachkov [at] xi-group [dot] com
 # 
 # Requirements:
 #	OS: Ubuntu 14.04 LTS
