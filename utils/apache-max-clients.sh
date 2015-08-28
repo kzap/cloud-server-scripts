@@ -1,0 +1,3 @@
+# Calculates what your MaxClients of Apache should be set to based on current memory available and current memory being used by each apache process
+
+ps aux | egrep "^apache.*httpd" | awk -v mem=`free -m | grep Mem | awk '{print $2}'` '{sum+=$6} END {printf "Total Processes: %13s\nTotal RAM: %23s KB\nTotal RAM: %23s MB\nAvg RAM per Proc: %17s MB\nMax Recommended Clients: %10s\n", NR,sum,sum/1024,sum/NR/1024,(mem*.7)/(sum/NR/1024)}'
